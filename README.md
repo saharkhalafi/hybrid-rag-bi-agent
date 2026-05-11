@@ -108,16 +108,7 @@ This system is highly dependent on **clean structured data**. Important factors:
 ├── sql_index.faiss         # Vector index
 ├── logs/                   # Telemetry & analytics
 └── requirements.txt
-'''
----
-## 🔥 Key Innovations
-
-- **Hybrid RAG + LLM SQL routing system** — Uses semantic templates first, falls back to LLM only when needed
-- **Multilingual semantic matching** — Strong support for both English and Persian
-- **Template-first execution** — Delivers strong cost optimization and low latency
-- **Reflection-based SQL correction loop** — Self-healing system that automatically fixes invalid queries
-- **Full telemetry tracking** — Monitors latency, token usage, cost, and cache hit rate in real-time
-
+```
 ---
 
 ## 📈 Future Improvements
@@ -127,7 +118,6 @@ This system is highly dependent on **clean structured data**. Important factors:
 - Implement query intent classifier (aggregation vs filter vs ranking)
 - Enable multi-table and complex schema support
 - Add distributed caching (Redis) for better scalability
-
 ---
 
 ## Dashboard
