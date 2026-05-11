@@ -35,17 +35,7 @@ It combines:
 ---
 
 ## 📦 Architecture
-
-```mermaid
-flowchart TD
-    A[User Question] --> B[Embedding Model<br/>E5 / MiniLM]
-    B --> C[FAISS Retrieval<br/>SQL Templates]
-    C --> D[Similarity Check]
-    D -->|High Match| E[SQL Template<br/>NO LLM]
-    D -->|Low Match| F[LLM SQL Generation<br/>Gemini]
-    E & F --> G[SQL Firewall Check]
-    G --> H[PostgreSQL Execution]
-    H --> I[Visualization Layer]
+![Screenshot](https://github.com/saharkhalafi/hybrid-rag-bi-agent/blob/main/Architecture.png) 
 
 ## 🧪 Evaluation Results
 
@@ -139,11 +129,10 @@ This system is highly dependent on **clean structured data**. Important factors:
 
 ---
 
-## 📌 Conclusion
+## Dashboard
+![Screenshot](https://github.com/saharkhalafi/hybrid-rag-bi-agent/blob/main/Dashboard1.png) 
 
-This project demonstrates a **production-style** approach to natural language BI systems, optimizing for:
 
-- 🎯 **High Accuracy** (98%)
-- ⚡ **Low Latency** through template-first routing
-- 💰 **Cost Efficiency** by minimizing LLM calls
-- 📊 **Full Observability** with comprehensive logging and monitoring
+
+
+
