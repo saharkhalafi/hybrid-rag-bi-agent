@@ -108,7 +108,8 @@ This system is highly dependent on **clean structured data**. Important factors:
 ├── sql_index.faiss         # Vector index
 ├── logs/                   # Telemetry & analytics
 └── requirements.txt
-
+'''
+---
 ## 🔥 Key Innovations
 
 - **Hybrid RAG + LLM SQL routing system** — Uses semantic templates first, falls back to LLM only when needed
