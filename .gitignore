@@ -34,5 +34,9 @@ huggingface/
 ALL.py
 
 indexes/
-*.faiss       
+*.faiss      
 *.pkl
+
+# Load data
+load_data.py
+evaluation/
