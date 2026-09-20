@@ -34,7 +34,7 @@ Instead of sending every question directly to an LLM, the system follows a **ret
 
 # 🏗️ Architecture
 
-The system uses two execution paths depending on query complexity.
+![Screenshot](https://github.com/saharkhalafi/hybrid-rag-bi-agent/blob/main/screenshots/bi%20agent.png) 
 
 ## Simple Query Path
 
@@ -820,7 +820,7 @@ The central design principle is simple:
 
 The current implementation supports:
 
-* Simple BI queries
+* BI queries
 * Semantic SQL-template retrieval
 * LLM SQL fallback
 * Compatibility-aware routing
@@ -846,54 +846,9 @@ SQL
 Database
 ```
 
-This project intentionally goes further:
-
-```text
-                  ┌───────────────┐
-                  │ User Question │
-                  └───────┬───────┘
-                          │
-                          ▼
-                  ┌───────────────┐
-                  │ Input Guard   │
-                  └───────┬───────┘
-                          │
-                          ▼
-               ┌─────────────────────┐
-               │ Complexity Detector │
-               └──────────┬──────────┘
-                          │
-             ┌────────────┴────────────┐
-             │                         │
-          Simple                    Complex
-             │                         │
-             ▼                         ▼
-      FAISS Retrieval            LLM Planner
-             │                         │
-             ▼                         ▼
-      Compatibility              Validated Plan
-             │                         │
-       ┌─────┴─────┐                   │
-       │           │                   │
-   Template      Gemini                │
-       │           │                   │
-       └─────┬─────┘                   │
-             │                         │
-             └────────────┬────────────┘
-                          ▼
-                    SQL Firewall
-                          │
-                          ▼
-                  PostgreSQL Executor
-                          │
-                          ▼
-                 Deterministic Analysis
-                          │
-                          ▼
-                    BI Presentation
-                          │
-                          ▼
-                    Observability
-```
-
 This architecture balances **accuracy, security, cost, latency, and flexibility** instead of optimizing for LLM usage alone.
+
+---
+
+# Demo
+![Screenshot](https://github.com/saharkhalafi/hybrid-rag-bi-agent/blob/main/screenshots/demo_1.png) 
