@@ -758,14 +758,9 @@ Potential future extensions include:
 * semantic metric catalog
 * business glossary / metric definitions
 * automatic clarification questions
-* query-result caching
 * parallel execution of independent analytical steps
 * richer anomaly detection
-* trend and seasonality analysis
-* row-level security
 * user-level permissions
-* multi-database support
-* query cost estimation
 * human feedback loop
 
 ---
